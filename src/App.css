@@ -1,0 +1,116 @@
+body{
+  background-color: rgba(255, 255, 255, 0.9);
+  font-family: 'Fira Sans', sans-serif;
+font-family: 'Open Sans', sans-serif;
+}
+.App {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  /* background-color: rgba(255, 255, 255, 0.5); */
+
+}
+.container-video{
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+h1{
+  color: white;
+  text-shadow: 2px 2px 1px crimson;
+}
+h2, h3, h4, p{
+  color: rgb(68,32,26);
+}
+h2{
+  text-shadow: 2px 1px 1px rgb(207,161,101);
+ }
+ .calory{
+   color:crimson;
+   font-weight: 600;
+ }
+.container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+input{
+  padding: 12px 24px;
+  background-color: transparent;
+  font-size: 14px;
+  line-height: 18px;
+  color: black;
+  background-color: rgba(241, 228, 204, 0.6);
+  margin-left: 0px;
+  box-shadow: inset 0px 0px 0px 4px #ddd6e8;
+ 
+}
+.foremap{
+  display: flex;
+  flex-wrap: wrap;
+justify-content: space-evenly;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 350px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 3px solid rgb(68,32,26);
+  box-shadow:  0px 0px 0px 1px rgb(207,161,101);
+  border-radius: 20px;
+  margin: 10px;
+
+}
+img{
+  border-radius: 15px;
+}
+.btn{
+  padding: 10px 24px;
+  font-size: 14px;
+  line-height: 18px;
+  color: rgb(41, 17, 13);
+  margin-top: 15px;
+  margin-bottom: 20px;
+  background-color: rgba(241, 228, 204, 0.6);
+  border-radius: 15px;
+  border: none;
+ 
+}
+#detali{
+display: flex;
+flex-direction: column;
+}
+.detali{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding: 10px;
+}
+li{
+  text-align: start;
+  color: rgb(68,32,26);
+}
+.header{
+  text-align: center;
+  margin: auto;
+}
+.table{
+  display: flex;
+flex-direction: column;
+align-items: flex-start;
+margin-left: 20%;
+margin-bottom: 10px;
+}
+h4{
+  margin: 5px 0;
+  font-style: italic;
+}
+.fat{
+  margin: 0 0 5px;
+  color: rgb(107, 19, 3);
+}
