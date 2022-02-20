@@ -39,7 +39,7 @@ setMyResipe(data.hits)
         <h1>Recipes for every day</h1>
     <div className="container">
         <form onSubmit={fimalSearch}>
-          <input onChange={yourSearch} placeholder='Напиши блюдо или ингредиенты...' ></input>      
+          <input onChange={yourSearch} placeholder='Напиши блюдо или ингредиенты...' spellcheck="false" ></input>      
         </form>  
         <button><img src={loupe} onClick={fimalSearch} alt='icon' className='input'/></button>
     </div>
@@ -55,6 +55,7 @@ setMyResipe(data.hits)
         carbonAll = {item.recipe.digest[1].total}
         fatAll = {item.recipe.digest[0].total}
         />
+
 ))}
   </div>
    </div>    

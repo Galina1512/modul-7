@@ -19,8 +19,14 @@ console.log(data.hits)
 setMyResipe(data.hits)
   }, [wordSubmit])
 
-  const yourSearch = (e) =>{
+  const search = (dishTipe) =>{
     setMySearch(e.target.value);
+    const id ="dinner";
+    if (id === "break"){
+      const newRecipes = myRecipe.filter(element =>
+        element.recipe.dishTipe === "breakfast");
+        setMyResipe(newRecipes)
+    }
   }
 
   const fimalSearch = (e) =>{
@@ -39,20 +45,19 @@ setMyResipe(data.hits)
     <div className="container">
         <form onSubmit={fimalSearch}>
           <label>Что собираетесь готовить?</label>
-          <input type='radio' name='chois' onChange={yourSearch} /> <label>Breakfast</label>
-          <input type='radio' name='chois' onChange={yourSearch} /> <label>Lunch/dinner</label>
-          <input type='radio' name='chois' onChange={yourSearch} /> <label>Snack</label>
-          <input type='radio' name='chois' onChange={yourSearch} /> <label>Teatime</label>
+          <input type='radio' id="break" name='chois' onChange={search} /> <label>Breakfast</label>
+          <input type='radio' id="dinner" name='chois' onChange={search} /> <label>Lunch/dinner</label>
+          <input type='radio' id="smack" name='chois' onChange={search} /> <label>Snack</label>
+          <input type='radio' id="tea" name='chois' onChange={search} /> <label>Teatime</label>
 
           {/* <input onChange={yourSearch} placeholder='Напиши блюдо или ингредиенты...' ></input>       */}
         </form>  
-        {/* <button>ENTER</button> */}
     </div>
   <div>
       {myRecipe.map(item =>(
         <Visiblescreen
         label={item.recipe.label}
-        mealType ={item.recipe.mealType}
+       image = {item.recipe.image}
         />
 ))}
   </div>

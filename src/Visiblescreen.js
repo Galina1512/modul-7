@@ -2,20 +2,16 @@ import { useState } from "react";
 function Visiblescreen ({label, image, ingredients, caloriesAll, weigthAll, proteinAll, fatAll, carbonAll}){
 
     const [detaly, setDetaly] = useState(true);
-        const total = (caloriesAll.toFixed() /weigthAll.toFixed()) * 100;
-        const carbon = (carbonAll / weigthAll)*100;
-        const fat = (fatAll / weigthAll)*100;
-        const protein = (proteinAll / weigthAll)*100;
-
-        const handleClick = () =>{
-            setDetaly(!detaly);
-        }
+    const total = (caloriesAll.toFixed() /weigthAll.toFixed()) * 100;
+    const carbon = (carbonAll / weigthAll)*100;
+    const fat = (fatAll / weigthAll)*100;
+    const protein = (proteinAll / weigthAll)*100;
 
     return(
     <div  className='card' >
         <h2>{label} </h2>
         <img src={image} alt='pict'/>
-        <button onClick={()=>handleClick()} className="btn" >More details</button>
+<button onClick={()=>setDetaly(!detaly)} className="btn"> {detaly ? "More details" :"Less details"}</button>
    {detaly? ("") : (
     <div id='detali'> 
     <div className="detali" >
